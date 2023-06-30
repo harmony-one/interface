@@ -32,4 +32,7 @@ describe('#getExplorerLink', () => {
   it('goerli', () => {
     expect(getExplorerLink(5, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://goerli.etherscan.io/address/abc')
   })
+  it('harmony', () => {
+    expect(getExplorerLink(1666600000, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://explorer.harmony.one/')
+  })
 })
