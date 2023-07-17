@@ -22,29 +22,34 @@ export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
 export const CELO_LIST = 'https://celo-org.github.io/celo-token-list/celo.tokenlist.json'
 export const PLASMA_BNB_LIST = 'https://raw.githubusercontent.com/plasmadlt/plasma-finance-token-list/master/bnb.json'
 
+export const HARMONY_MAINNET_LIST = 'https://raw.githubusercontent.com/harmony-one/interface/hmy-mainnet-updates/public/tokenlist.json'
+
 export const UNSUPPORTED_LIST_URLS: string[] = [BA_LIST, UNI_UNSUPPORTED_LIST]
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [UNI_LIST]
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [HARMONY_MAINNET_LIST]
 export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   UNI_EXTENDED_LIST,
-  COMPOUND_LIST,
-  AAVE_LIST,
+  // COMPOUND_LIST,
+  // AAVE_LIST,
   //  CMC_ALL_LIST,
-  COINGECKO_LIST,
-  COINGECKO_BNB_LIST,
-  COINGECKO_ARBITRUM_LIST,
-  COINGECKO_OPTIMISM_LIST,
-  COINGECKO_CELO_LIST,
-  COINGECKO_POLYGON_LIST,
-  KLEROS_LIST,
-  GEMINI_LIST,
-  WRAPPED_LIST,
-  SET_LIST,
-  ARBITRUM_LIST,
-  OPTIMISM_LIST,
-  CELO_LIST,
-  PLASMA_BNB_LIST,
+  // COINGECKO_LIST,
+  // COINGECKO_BNB_LIST,
+  // COINGECKO_ARBITRUM_LIST,
+  // COINGECKO_OPTIMISM_LIST,
+  // COINGECKO_CELO_LIST,
+  // COINGECKO_POLYGON_LIST,
+  // KLEROS_LIST,
+  // GEMINI_LIST,
+  // WRAPPED_LIST,
+  // SET_LIST,
+  // ARBITRUM_LIST,
+  // HARMONY_MAINNET_LIST,
+  // OPTIMISM_LIST,
+  // CELO_LIST,
+  // PLASMA_BNB_LIST,
+  // HARMONY_MAINNET_LIST,
+  UNI_LIST,
   ...UNSUPPORTED_LIST_URLS,
 ]
 

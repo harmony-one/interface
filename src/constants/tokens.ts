@@ -25,13 +25,6 @@ const USDC_GOERLI = new Token(
   'USDC',
   'USD//C'
 )
-const USDC_SEPOLIA = new Token(
-  SupportedChainId.SEPOLIA,
-  '0x6f14C02Fc1F78322cFd7d707aB90f18baD3B54f5',
-  6,
-  'USDC',
-  'USD//C'
-)
 export const USDC_OPTIMISM = new Token(
   SupportedChainId.OPTIMISM,
   '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
@@ -53,6 +46,63 @@ export const BRIDGED_USDC_ARBITRUM = new Token(
   'USDC',
   'USD//C'
 )
+
+export const WBTC_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0x118f50d23810c5E09Ebffb42d7D3328dbF75C2c2',
+  8,
+  '1WBTC',
+  'Wrapped BTC'
+)
+
+export const ETH_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0x4cC435d7b9557d54d6EF02d69Bbf72634905Bf11',
+  18,
+  '1ETH',
+  'ETH'
+)
+
+export const USDT_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0xF2732e8048f1a411C63e2df51d08f4f52E598005',
+  6,
+  '1USDT',
+  'Tether USD'
+)
+
+export const USDC_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0xBC594CABd205bD993e7FfA6F3e9ceA75c1110da5',
+  6,
+  '1USDC',
+  'USD Coin'
+)
+
+export const ARB_USDC_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0x9b5fae311A4A4b9d838f301C9c27b55d19BAa4Fb',
+  6,
+  'arbUSDC',
+  'USD Coin (Arb1)'
+)
+
+export const ARB_USDT_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0x2DA729BA5231d2C79290aBA4a8b85a5c94dA4724',
+  6,
+  'arbUSDT',
+  'Tether USD'
+)
+
+export const ARB_DAI_HARMONY = new Token(
+  SupportedChainId.HARMONY,
+  '0x7C07d01C9DaB5aBB09CE2b42242a7570F25fC2CC',
+  18,
+  'arbDAI',
+  'Dai Stablecoin'
+)
+
 export const USDC_ARBITRUM = new Token(
   SupportedChainId.ARBITRUM_ONE,
   '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
@@ -472,6 +522,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WBNB',
     'Wrapped BNB'
   ),
+  [SupportedChainId.HARMONY]: new Token(
+    SupportedChainId.HARMONY,
+    '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
 }
 
 export function isCelo(chainId: number): chainId is SupportedChainId.CELO | SupportedChainId.CELO_ALFAJORES {
@@ -533,6 +590,28 @@ class BscNativeCurrency extends NativeCurrency {
   }
 }
 
+function isHarmony(chainId: number): chainId is SupportedChainId.HARMONY {
+  return chainId === SupportedChainId.HARMONY
+}
+
+class HarmonyNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  get wrapped(): Token {
+    if (!isHarmony(this.chainId)) throw new Error('Not harmony')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    invariant(wrapped instanceof Token)
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isHarmony(chainId)) throw new Error('Not harmony')
+    super(chainId, 18, 'ONE', 'ONE')
+  }
+}
+
 class ExtendedEther extends Ether {
   public get wrapped(): Token {
     const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
@@ -550,6 +629,9 @@ class ExtendedEther extends Ether {
 const cachedNativeCurrency: { [chainId: number]: NativeCurrency | Token } = {}
 export function nativeOnChain(chainId: number): NativeCurrency | Token {
   if (cachedNativeCurrency[chainId]) return cachedNativeCurrency[chainId]
+
+  chainId = chainId ||  SupportedChainId.HARMONY;
+
   let nativeCurrency: NativeCurrency | Token
   if (isMatic(chainId)) {
     nativeCurrency = new MaticNativeCurrency(chainId)
@@ -557,9 +639,12 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = getCeloNativeCurrency(chainId)
   } else if (isBsc(chainId)) {
     nativeCurrency = new BscNativeCurrency(chainId)
+  } else if (isHarmony(chainId)) {
+    nativeCurrency = new HarmonyNativeCurrency(chainId)
   } else {
     nativeCurrency = ExtendedEther.onChain(chainId)
   }
+
   return (cachedNativeCurrency[chainId] = nativeCurrency)
 }
 
@@ -583,6 +668,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.CELO]: PORTAL_USDC_CELO.address,
     [SupportedChainId.CELO_ALFAJORES]: PORTAL_USDC_CELO.address,
     [SupportedChainId.GOERLI]: USDC_GOERLI.address,
-    [SupportedChainId.SEPOLIA]: USDC_SEPOLIA.address,
+    [SupportedChainId.HARMONY]: USDC_HARMONY.address,
+    // [SupportedChainId.SEPOLIA]: USDC_SEPOLIA.address,
   },
 }

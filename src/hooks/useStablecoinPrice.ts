@@ -13,6 +13,7 @@ import {
   USDC_MAINNET,
   USDC_POLYGON,
   USDT_BSC,
+  USDT_HARMONY,
 } from '../constants/tokens'
 
 // Stablecoin amounts used when calculating spot price for a given currency.
@@ -24,6 +25,7 @@ const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> } = {
   [SupportedChainId.POLYGON]: CurrencyAmount.fromRawAmount(USDC_POLYGON, 10_000e6),
   [SupportedChainId.CELO]: CurrencyAmount.fromRawAmount(CUSD_CELO, 10_000e18),
   [SupportedChainId.BNB]: CurrencyAmount.fromRawAmount(USDT_BSC, 100e18),
+  [SupportedChainId.HARMONY]: CurrencyAmount.fromRawAmount(USDT_HARMONY, 1e5),
 }
 
 /**

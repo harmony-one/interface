@@ -7,6 +7,8 @@
  * Because this is not explicitly derived from @uniswap/sdk-core, there is a unit test to enforce conformance.
  */
 export enum SupportedChainId {
+  HARMONY = 1666600000,
+
   MAINNET = 1,
   GOERLI = 5,
   SEPOLIA = 11155111,
@@ -46,6 +48,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.OPTIMISM]: 'optimism',
   [SupportedChainId.OPTIMISM_GOERLI]: 'optimism_goerli',
   [SupportedChainId.BNB]: 'bnb',
+  [SupportedChainId.HARMONY]: 'harmony'
 }
 
 /**
@@ -66,6 +69,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.BNB,
+  SupportedChainId.HARMONY,
 ] as const
 
 /**
@@ -77,6 +81,7 @@ export const UNSUPPORTED_V2POOL_CHAIN_IDS = [
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.BNB,
   SupportedChainId.ARBITRUM_GOERLI,
+  SupportedChainId.HARMONY,
 ] as const
 
 export const TESTNET_CHAIN_IDS = [
@@ -101,6 +106,7 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.CELO,
   SupportedChainId.CELO_ALFAJORES,
   SupportedChainId.BNB,
+  SupportedChainId.HARMONY,
 ] as const
 
 export type SupportedL1ChainId = typeof L1_CHAIN_IDS[number]

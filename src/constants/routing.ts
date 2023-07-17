@@ -51,6 +51,13 @@ import {
   WETH_POLYGON,
   WETH_POLYGON_MUMBAI,
   WRAPPED_NATIVE_CURRENCY,
+  WBTC_HARMONY,
+  ETH_HARMONY,
+  USDT_HARMONY,
+  USDC_HARMONY,
+  ARB_USDC_HARMONY,
+  ARB_USDT_HARMONY,
+  ARB_DAI_HARMONY
 } from './tokens'
 
 type ChainTokenList = {
@@ -151,6 +158,18 @@ export const COMMON_BASES: ChainCurrencyList = {
     nativeOnChain(SupportedChainId.SEPOLIA),
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.SEPOLIA] as Token,
   ],
+
+  [SupportedChainId.HARMONY]: [
+    nativeOnChain(SupportedChainId.HARMONY), 
+    WBTC_HARMONY,
+    ETH_HARMONY,
+    USDT_HARMONY,
+    USDC_HARMONY,
+    ARB_USDC_HARMONY,
+    ARB_USDT_HARMONY,
+    ARB_DAI_HARMONY
+  ],
+
   [SupportedChainId.ARBITRUM_ONE]: [
     nativeOnChain(SupportedChainId.ARBITRUM_ONE),
     DAI_ARBITRUM_ONE,
