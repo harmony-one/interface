@@ -15,12 +15,13 @@ import UNISWAP_LOGO from 'assets/svg/logo.svg'
 import { SupportedChainId } from 'constants/chains'
 import { useCallback } from 'react'
 import { isMobile, isNonIOSPhone } from 'utils/userAgent'
+import { UniwalletConnect as UniwalletWCV2Connect, WalletConnectV2 } from './WalletConnectV2'
 
 import { RPC_URLS } from '../constants/networks'
 import { RPC_PROVIDERS } from '../constants/providers'
 import { Connection, ConnectionType } from './types'
 import { getIsCoinbaseWallet, getIsInjected, getIsMetaMaskWallet } from './utils'
-import { UniwalletConnect, WalletConnectPopup } from './WalletConnect'
+import { UniwalletConnect } from './WalletConnect'
 
 function onError(error: Error) {
   console.debug(`web3-react error: ${error}`)
@@ -75,9 +76,11 @@ export const gnosisSafeConnection: Connection = {
   shouldDisplay: () => false,
 }
 
-const [web3WalletConnect, web3WalletConnectHooks] = initializeConnector<WalletConnectPopup>(
-  (actions) => new WalletConnectPopup({ actions, onError })
+const [web3WalletConnect, web3WalletConnectHooks] = initializeConnector<WalletConnectV2>(
+  (actions: any, defaultChainId = SupportedChainId.HARMONY) =>
+       new WalletConnectV2({ actions, defaultChainId, onError })
 )
+
 export const walletConnectConnection: Connection = {
   getName: () => 'WalletConnect',
   connector: web3WalletConnect,
