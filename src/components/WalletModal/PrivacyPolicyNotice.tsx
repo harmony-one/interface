@@ -16,13 +16,13 @@ const LAST_UPDATED_DATE = '11.17.22'
 export default function PrivacyPolicyNotice() {
   return (
     <ThemedText.Caption color="textSecondary">
-      <Trans>By connecting a wallet, you agree to Protofire&apos;</Trans>{' '}
-      <StyledLink href="https://harmonyone.notion.site/Terms-of-Service-452ba9ee953e460983ed7e5558dc0397?pvs=4">
+      <Trans>By connecting a wallet, you agree to Protofire&apos;s</Trans>{' '}
+      <StyledLink href="https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35">
         <Trans>Terms of Service</Trans>{' '}
       </StyledLink>
-      <Trans>and</Trans>{' '}
-      <StyledLink href="https://harmonyone.notion.site/Disclosure-Agreement-b06a1677c6b843a083d64544c419cf1b?pvs=4">
-        <Trans>Disclosure Agreement.</Trans>
+      <Trans>and consent to its</Trans>{' '}
+      <StyledLink href="https://doc.swap.country/privacy-policy-70fd833dc5f542a8b52ec73626ebb245">
+        <Trans>Privacy Policy.</Trans>
       </StyledLink>
       <LastUpdatedText>
         {' ('}

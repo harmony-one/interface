@@ -124,7 +124,7 @@ function PrivacyPolicy() {
       <AutoColumn gap="16px">
         <AutoColumn gap="sm" style={{ width: '100%' }}>
           <StyledExternalCard>
-            <ExternalLink href="https://harmonyone.notion.site/Terms-of-Service-452ba9ee953e460983ed7e5558dc0397">
+            <ExternalLink href="https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35">
               <RowBetween>
                 <AutoRow gap="4px">
                   <Info size={20} />
@@ -137,12 +137,12 @@ function PrivacyPolicy() {
             </ExternalLink>
           </StyledExternalCard>
           <StyledExternalCard>
-            <ExternalLink href="https://harmonyone.notion.site/Disclosure-Agreement-b06a1677c6b843a083d64544c419cf1b?pvs=4">
+            <ExternalLink href="https://doc.swap.country/privacy-policy-70fd833dc5f542a8b52ec73626ebb245">
               <RowBetween>
                 <AutoRow gap="4px">
                   <Info size={20} />
                   <ThemedText.DeprecatedMain fontSize={14} color="accentAction">
-                    <Trans>Disclosure Agreement</Trans>
+                    <Trans>Privacy Policy</Trans>
                   </ThemedText.DeprecatedMain>
                 </AutoRow>
                 <StyledLinkOut size={20} />
