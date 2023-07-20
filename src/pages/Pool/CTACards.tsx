@@ -79,13 +79,13 @@ export default function CTACards() {
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA>
-      <CTA data-testid="cta-infolink" href="https://swap.country/#/pools">
+      <CTA href="javascript:void(0);" target="_self">
         <ResponsiveColumn>
           <HeaderText style={{ alignSelf: 'flex-start' }}>
-            <Trans>Top pools</Trans> ↗
+            <Trans>Top pools</Trans>
           </HeaderText>
           <ThemedText.DeprecatedBody fontWeight={400} style={{ alignSelf: 'flex-start' }}>
-            <Trans>Swap Analytics Coming Soon.</Trans>
+            <Trans>Swap Analytics Coming Soon</Trans>
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA>
