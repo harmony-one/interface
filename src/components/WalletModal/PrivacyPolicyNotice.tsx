@@ -16,18 +16,20 @@ const LAST_UPDATED_DATE = '11.17.22'
 export default function PrivacyPolicyNotice() {
   return (
     <ThemedText.Caption color="textSecondary">
-      <Trans>By connecting a wallet, you agree to Uniswap Labs&apos;</Trans>{' '}
-      <StyledLink href="https://uniswap.org/terms-of-service/">
+      <Trans>By connecting a wallet, you agree to Protofire&apos;s</Trans>{' '}
+      <StyledLink href="https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35">
         <Trans>Terms of Service</Trans>{' '}
       </StyledLink>
       <Trans>and consent to its</Trans>{' '}
-      <StyledLink href="https://uniswap.org/privacy-policy">
+      <StyledLink href="https://doc.swap.country/privacy-policy-70fd833dc5f542a8b52ec73626ebb245">
         <Trans>Privacy Policy.</Trans>
       </StyledLink>
       <LastUpdatedText>
         {' ('}
         <Trans>Last Updated</Trans>
-        {` ${LAST_UPDATED_DATE})`}
+        {/* {` ${LAST_UPDATED_DATE})`} */}
+        {` 7.19.23)`}
+
       </LastUpdatedText>
     </ThemedText.Caption>
   )

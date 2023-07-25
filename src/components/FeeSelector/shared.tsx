@@ -19,6 +19,7 @@ export const FEE_AMOUNT_DETAIL: Record<
       SupportedChainId.OPTIMISM,
       SupportedChainId.POLYGON,
       SupportedChainId.POLYGON_MUMBAI,
+      SupportedChainId.HARMONY,
     ],
   },
   [FeeAmount.LOW]: {

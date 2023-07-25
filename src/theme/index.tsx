@@ -114,7 +114,7 @@ export function getTheme() {
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
   const darkMode = useIsDarkMode()
-  const themeObject = useMemo(() => getTheme(darkMode), [darkMode])
+  const themeObject = useMemo(() => getTheme(), [darkMode])
   return <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>
 }
 

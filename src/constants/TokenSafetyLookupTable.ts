@@ -1,7 +1,7 @@
 import { TokenInfo } from '@uniswap/token-lists'
 
 import store from '../state'
-import { UNI_EXTENDED_LIST, UNI_LIST, UNSUPPORTED_LIST_URLS } from './lists'
+import { HARMONY_MAINNET_LIST, UNI_EXTENDED_LIST, UNI_LIST, UNSUPPORTED_LIST_URLS } from './lists'
 import brokenTokenList from './tokenLists/broken.tokenlist.json'
 import { NATIVE_CHAIN_ID } from './tokens'
 
@@ -18,6 +18,11 @@ class TokenSafetyLookupTable {
 
   createMap() {
     const dict: { [key: string]: TOKEN_LIST_TYPES } = {}
+
+    // Initialize Harmony tokens first
+    store.getState().lists.byUrl[HARMONY_MAINNET_LIST].current?.tokens.forEach((token) => {
+      dict[token.address.toLowerCase()] = TOKEN_LIST_TYPES.UNI_DEFAULT
+    })
 
     // Initialize extended tokens first
     store.getState().lists.byUrl[UNI_EXTENDED_LIST].current?.tokens.forEach((token) => {

@@ -29,7 +29,8 @@
     "test": "craco test",
     "cypress:open": "cypress open --browser chrome --e2e",
     "cypress:run": "cypress run --browser chrome --e2e",
-    "deduplicate": "yarn-deduplicate --strategy=highest"
+    "deduplicate": "yarn-deduplicate --strategy=highest",
+    "postinstall": "yarn patch-package"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -117,7 +118,9 @@
     "jest-fetch-mock": "^3.0.3",
     "jest-styled-components": "^7.0.8",
     "ms.macro": "^2.0.0",
+    "patch-package": "^7.0.0",
     "path-browserify": "^1.0.1",
+    "postinstall": "^0.8.0",
     "prettier": "^2.7.1",
     "process": "^0.11.10",
     "react-scripts": "^5.0.1",
@@ -197,6 +200,7 @@
     "@web3-react/types": "^8.2.0",
     "@web3-react/url": "^8.2.0",
     "@web3-react/walletconnect": "^8.2.0",
+    "@web3-react/walletconnect-v2": "^8.3.7",
     "ajv": "^8.11.0",
     "ajv-formats": "^2.1.1",
     "array.prototype.flat": "^1.2.4",

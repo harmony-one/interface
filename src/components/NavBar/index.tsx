@@ -67,9 +67,9 @@ export const PageTabs = () => {
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
-      <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
+{/*       <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
         <Trans>Tokens</Trans>
-      </MenuItem>
+      </MenuItem> */}
       {!shouldDisableNFTRoutes && (
         <MenuItem dataTestId="nft-nav" href="/nfts" isActive={isNftPage}>
           <Trans>NFTs</Trans>
@@ -105,7 +105,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
                 height="48"
                 data-testid="harmony-logo"
                 className={styles.logo}
-                src='/favicon8.png'
+                src='/logo_fav.png'
                 onClick={() => {
                   navigate({
                     pathname: '/',
@@ -129,13 +129,13 @@ const Navbar = ({ blur }: { blur: boolean }) => {
               display: 'flex',
             })}
           >
-            <SearchBar />
+            {/* <SearchBar /> */}
           </Box>
           <Box className={styles.rightSideContainer}>
             <Row gap="12">
-              <Box position="relative" display={isNavSearchInputVisible ? 'none' : { sm: 'flex' }}>
+              {/* <Box position="relative" display={isNavSearchInputVisible ? 'none' : { sm: 'flex' }}>
                 <SearchBar />
-              </Box>
+              </Box> */}
               {isNftPage && sellPageState !== ProfilePageStateType.LISTING && <Bag />}
               {!isNftPage && (
                 <Box display={{ sm: 'none', lg: 'flex' }}>

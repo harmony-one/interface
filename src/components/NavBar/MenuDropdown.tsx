@@ -137,7 +137,7 @@ export const MenuDropdown = () => {
         </NavIcon>
 
         {isOpen && (
-          <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '56', lg: 'unset' }} right="0">
+          <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '56', lg: 'unset' }}>
             <Column gap="16">
               <Column paddingX="8" gap="4">
                 <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
@@ -186,20 +186,20 @@ export const MenuDropdown = () => {
                 paddingX="8"
                 style={{ width: '270px' }}
               >
-                <SecondaryLinkedText href="https://help.uniswap.org/en/">
-                  <Trans>Help center</Trans> ↗
-                </SecondaryLinkedText>
-                <SecondaryLinkedText href="https://docs.uniswap.org/">
+                {/* <SecondaryLinkedText href="https://discord.com/invite/gmAA8RMdyW">
+                  <Trans>Discord Help center</Trans> ↗
+                </SecondaryLinkedText> */}
+                {/* <SecondaryLinkedText href="https://docs.uniswap.org/">
                   <Trans>Documentation</Trans> ↗
-                </SecondaryLinkedText>
+                </SecondaryLinkedText> */}
                 
                 <SecondaryLinkedText href="https://harmony.one/buy">
                   <Trans>Buy ONE</Trans> ↗
                 </SecondaryLinkedText>
 
-                <SecondaryLinkedText href="https://uniswap.canny.io/feature-requests">
+                {/* <SecondaryLinkedText href="https://uniswap.canny.io/feature-requests">
                   <Trans>Feedback</Trans> ↗
-                </SecondaryLinkedText>
+                </SecondaryLinkedText> */}
                 <SecondaryLinkedText
                   onClick={() => {
                     toggleOpen()

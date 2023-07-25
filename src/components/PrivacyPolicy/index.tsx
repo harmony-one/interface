@@ -49,30 +49,30 @@ const StyledLinkOut = styled(ArrowDown)`
 const EXTERNAL_APIS = [
   {
     name: 'Auto Router',
-    description: <Trans>The app fetches the optimal trade route from a Uniswap Labs server.</Trans>,
+    description: <Trans>The app fetches the optimal trade route from a server.</Trans>,
   },
-  {
-    name: 'Infura',
-    description: <Trans>The app fetches on-chain data and constructs contract calls with an Infura API.</Trans>,
-  },
-  {
-    name: 'TRM Labs',
-    description: (
-      <>
-        <Trans>
-          The app securely collects your wallet address and shares it with TRM Labs Inc. for risk and compliance
-          reasons.
-        </Trans>{' '}
-        <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
-          <Trans>Learn more</Trans>
-        </ExternalLink>
-      </>
-    ),
-  },
-  {
-    name: 'Google Analytics & Amplitude',
-    description: <Trans>The app logs anonymized usage statistics in order to improve over time.</Trans>,
-  },
+  // {
+  //   name: 'Infura',
+  //   description: <Trans>The app fetches on-chain data and constructs contract calls with an Infura API.</Trans>,
+  // },
+  // {
+  //   name: 'TRM Labs',
+  //   description: (
+  //     <>
+  //       <Trans>
+  //         The app securely collects your wallet address and shares it with TRM Labs Inc. for risk and compliance
+  //         reasons.
+  //       </Trans>{' '}
+  //       <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
+  //         <Trans>Learn more</Trans>
+  //       </ExternalLink>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   name: 'Google Analytics & Amplitude',
+  //   description: <Trans>The app logs anonymized usage statistics in order to improve over time.</Trans>,
+  // },
   {
     name: 'The Graph',
     description: <Trans>The app fetches blockchain data from The Graph’s hosted service.</Trans>,
@@ -124,12 +124,12 @@ function PrivacyPolicy() {
       <AutoColumn gap="16px">
         <AutoColumn gap="sm" style={{ width: '100%' }}>
           <StyledExternalCard>
-            <ExternalLink href="https://uniswap.org/terms-of-service">
+            <ExternalLink href="https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35">
               <RowBetween>
                 <AutoRow gap="4px">
                   <Info size={20} />
                   <ThemedText.DeprecatedMain fontSize={14} color="accentAction">
-                    <Trans>Uniswap Labs&apos; Terms of Service</Trans>
+                    <Trans>Protofire&apos;s Terms of Service</Trans>
                   </ThemedText.DeprecatedMain>
                 </AutoRow>
                 <StyledLinkOut size={20} />
@@ -137,7 +137,7 @@ function PrivacyPolicy() {
             </ExternalLink>
           </StyledExternalCard>
           <StyledExternalCard>
-            <ExternalLink href="https://uniswap.org/privacy-policy/">
+            <ExternalLink href="https://doc.swap.country/privacy-policy-70fd833dc5f542a8b52ec73626ebb245">
               <RowBetween>
                 <AutoRow gap="4px">
                   <Info size={20} />
@@ -170,7 +170,7 @@ function PrivacyPolicy() {
           <ThemedText.DeprecatedBody fontSize={12}>
             <Row justify="center" marginBottom="1rem">
               <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
-                <Trans>Learn more</Trans>
+                {/* <Trans>Learn more</Trans> */}
               </ExternalLink>
             </Row>
           </ThemedText.DeprecatedBody>

@@ -114,6 +114,16 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     CAKE_BSC,
   ],
   [SupportedChainId.CELO]: [CUSD_CELO, CEUR_CELO, CMC02_CELO, PORTAL_USDC_CELO, PORTAL_ETH_CELO],
+  [SupportedChainId.HARMONY]: [
+    ...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.HARMONY],
+    WBTC_HARMONY,
+    ETH_HARMONY,
+    USDT_HARMONY,
+    USDC_HARMONY,
+    ARB_USDC_HARMONY,
+    ARB_USDT_HARMONY,
+    ARB_DAI_HARMONY
+  ],
 }
 export const ADDITIONAL_BASES: { [chainId: number]: { [tokenAddress: string]: Token[] } } = {
   [SupportedChainId.MAINNET]: {
@@ -262,6 +272,17 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     BUSD_BSC,
     ETH_BSC,
   ],
+  [SupportedChainId.HARMONY]: [
+    ...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.HARMONY],
+    WBTC_HARMONY,
+    ETH_HARMONY,
+    USDT_HARMONY,
+    USDC_HARMONY,
+    ARB_USDC_HARMONY,
+    ARB_USDT_HARMONY,
+    ARB_DAI_HARMONY
+  ],
+  
 }
 export const PINNED_PAIRS: { readonly [chainId: number]: [Token, Token][] } = {
   [SupportedChainId.MAINNET]: [

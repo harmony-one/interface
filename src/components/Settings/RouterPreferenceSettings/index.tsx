@@ -33,7 +33,7 @@ export default function RouterPreferenceSettings() {
               <Trans>Auto Router API</Trans>
             </ThemedText.BodySecondary>
             <ThemedText.Caption color="textSecondary">
-              <Trans>Use the Uniswap Labs API to get faster quotes.</Trans>
+              <Trans>Uses Uniswap Powered APIs to get faster quotes.</Trans>
             </ThemedText.Caption>
           </Column>
         </RowFixed>
@@ -51,10 +51,10 @@ export default function RouterPreferenceSettings() {
           >
             <Column gap="xs">
               <ThemedText.BodyPrimary>
-                <Trans>Uniswap API</Trans>
+                <Trans>Swap API</Trans>
               </ThemedText.BodyPrimary>
               <ThemedText.Caption color="textSecondary">
-                <Trans>Finds the best route on the Uniswap Protocol using the Uniswap Labs Routing API.</Trans>
+                <Trans>Finds the best route using a Uniswap Powered Routing API.</Trans>
               </ThemedText.Caption>
             </Column>
           </Preference>
@@ -64,11 +64,11 @@ export default function RouterPreferenceSettings() {
           >
             <Column gap="xs">
               <ThemedText.BodyPrimary>
-                <Trans>Uniswap client</Trans>
+                <Trans>Swap client</Trans>
               </ThemedText.BodyPrimary>
               <ThemedText.Caption color="textSecondary">
                 <Trans>
-                  Finds the best route on the Uniswap Protocol through your browser. May result in high latency and
+                  Finds the best route through your browser. May result in high latency and
                   prices.
                 </Trans>
               </ThemedText.Caption>
@@ -79,3 +79,4 @@ export default function RouterPreferenceSettings() {
     </Column>
   )
 }
+

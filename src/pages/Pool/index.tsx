@@ -269,7 +269,7 @@ export default function Pool() {
                 <Trans>Pools</Trans>
               </ThemedText.LargeHeader>
               <ButtonRow>
-                {showV2Features && (
+                {/* {showV2Features && (
                   <PoolMenu
                     menuItems={menuItems}
                     flyoutAlignment={FlyoutAlignment.LEFT}
@@ -282,7 +282,7 @@ export default function Pool() {
                       </MoreOptionsButton>
                     )}
                   />
-                )}
+                )} */}
                 <ResponsiveButtonPrimary data-cy="join-pool-button" id="join-pool-button" as={Link} to="/add/ETH">
                   + <Trans>New Position</Trans>
                 </ResponsiveButtonPrimary>

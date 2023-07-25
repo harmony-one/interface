@@ -69,23 +69,23 @@ export default function CTACards() {
 
   return (
     <CTASection>
-      <CTA href="https://support.uniswap.org/hc/en-us/categories/8122334631437-Providing-Liquidity-">
+      <CTA href="https://multisig.harmony.one/welcome">
         <ResponsiveColumn>
           <HeaderText>
-            <Trans>Learn about providing liquidity</Trans> ↗
+            <Trans>Use Harmony Multisig</Trans> ↗
           </HeaderText>
           <ThemedText.DeprecatedBody fontWeight={400} style={{ alignItems: 'center', display: 'flex' }}>
-            <Trans>Check out our v3 LP walkthrough and migration guides.</Trans>
+            <Trans>Generate a Multisig Wallet for Added Security</Trans>
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA>
-      <CTA data-testid="cta-infolink" href={infoLink + 'pools'}>
+      <CTA href="javascript:void(0);" target="_self">
         <ResponsiveColumn>
           <HeaderText style={{ alignSelf: 'flex-start' }}>
-            <Trans>Top pools</Trans> ↗
+            <Trans>Top pools</Trans>
           </HeaderText>
           <ThemedText.DeprecatedBody fontWeight={400} style={{ alignSelf: 'flex-start' }}>
-            <Trans>Explore Uniswap Analytics.</Trans>
+            <Trans>Swap Analytics Coming Soon</Trans>
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA>

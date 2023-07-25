@@ -62,7 +62,7 @@ type ChainInfoMap = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo } & 
 } & { readonly [chainId in SupportedL1ChainId]: L1ChainInfo }
 
 const CHAIN_INFO: ChainInfoMap = {
-  /*
+  
   [SupportedChainId.MAINNET]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',
@@ -225,15 +225,16 @@ const CHAIN_INFO: ChainInfoMap = {
     color: darkTheme.chain_56,
     backgroundColor: darkTheme.chain_56_background,
   },
-  */
+ 
   [SupportedChainId.HARMONY]: {
     networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: 'https://bridge.harmony.one/one',
     docs: 'https://docs.harmony.one/',
     explorer: 'https://explorer.harmony.one/',
     infoLink: 'https://info.uniswap.org/#/',
     label: 'Harmony',
     nativeCurrency: { name: 'Harmony', symbol: 'ONE', decimals: 18 },
-    // color: darkTheme.chain_1,
     logoUrl: harmonyLogo,
     defaultListUrl: HARMONY_MAINNET_LIST,
   },

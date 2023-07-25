@@ -26,6 +26,7 @@ export enum SupportedChainId {
   CELO_ALFAJORES = 44787,
 
   BNB = 56,
+  AVALANCHE = 43114,
 }
 
 export const UniWalletSupportedChains = [
@@ -48,7 +49,8 @@ export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.OPTIMISM]: 'optimism',
   [SupportedChainId.OPTIMISM_GOERLI]: 'optimism_goerli',
   [SupportedChainId.BNB]: 'bnb',
-  [SupportedChainId.HARMONY]: 'harmony'
+  [SupportedChainId.HARMONY]: 'harmony',
+  [SupportedChainId.AVALANCHE]: 'avalanche',
 }
 
 /**

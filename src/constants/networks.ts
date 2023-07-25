@@ -104,6 +104,9 @@ export const FALLBACK_URLS = {
     'https://api.harmony.one'
     // 'https://api.s0.b.hmny.io',
   ],
+  [SupportedChainId.AVALANCHE]: [
+    'https://api.avax.network/ext/bc/C/rpc'
+  ],
 }
 
 /**
@@ -149,5 +152,8 @@ export const RPC_URLS = {
   [SupportedChainId.BNB]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.BNB]],
   [SupportedChainId.HARMONY]: [
     ...FALLBACK_URLS[SupportedChainId.HARMONY],
+  ],
+  [SupportedChainId.AVALANCHE]: [
+    ...FALLBACK_URLS[SupportedChainId.AVALANCHE],
   ],
 }

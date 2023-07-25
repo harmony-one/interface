@@ -36,7 +36,7 @@ export function SwitchLocaleLink() {
 
   return null;
 
-  if (!targetLocale || !to) return null
+  /* if (!targetLocale || !to) return null
 
   return (
     <Container>
@@ -47,5 +47,5 @@ export function SwitchLocaleLink() {
         </StyledInternalLink>
       </Trans>
     </Container>
-  )
+  ) */
 }

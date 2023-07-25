@@ -101,8 +101,8 @@ export const ChainSelector = ({ leftAlign }: ChainSelectorProps) => {
           as="button"
           gap="8"
           className={styles.ChainSelector}
-          background={isOpen ? 'accentActiveSoft' : 'none'}
-          onClick={() => setIsOpen(!isOpen)}
+          // background={isOpen ? 'accentActiveSoft' : 'none'}
+          // onClick={() => setIsOpen(!isOpen)}
         >
           {!isSupported ? (
             <AlertTriangle size={20} color={theme.textSecondary} />
