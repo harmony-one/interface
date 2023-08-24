@@ -75,6 +75,14 @@
       "name": "Dai Stablecoin",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/9956/small/Badge_Dai.png"
+    },
+    {
+      "chainId": 1666600000,
+      "address": "0xDC60CcF6Ae05f898F4255EF580E731b4011100Ec",
+      "symbol": "bscBNB",
+      "name": "BNB",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png"
     }
   ]
 }
